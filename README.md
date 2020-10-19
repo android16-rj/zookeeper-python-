@@ -124,3 +124,29 @@ It looks like we will soon have more rabbits!"""]
 
 
 #animals = [camel, lion, deer, goose, bat, rabbit]
+
+while True:
+    print("Please enter the number of the habitat you would like to view: ")
+    user_input = input()
+    if user_input == 'exit':
+        print('See you later!')
+        break
+    else:
+        n = int(user_input)
+        print(animals[n])
+        
+        
+heres an alternative sol
+
+while True:
+    choice = str(input("Please enter the number of the habitat you would like to view: "))
+    if str(choice) == "exit":
+        print("See you later!")
+        break
+    elif int(choice) < len(animals):
+        print(animals[int(choice)])
+        print("Type 'exit' to leave")
+        continue
+    else:
+        print("There is no {} habitat - please pick again".format(choice))
+        continue
